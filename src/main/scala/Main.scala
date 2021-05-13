@@ -2,6 +2,7 @@ import C_1_3.{MainC13A, MainC13B}
 import C_1_4.{MainC14A, MainC14B}
 import C_1_5.MainC15A
 import C_2_3.MainC23A
+import C_2_4.MainC24A
 import cats.Show
 import cats.instances.int._
 import cats.syntax.show._
@@ -20,7 +21,9 @@ object Main {
 
   //chapter 2.3
   val EXERSISE_C_2_3_1=MainC23A
-  val selector=EXERSISE_C_2_3_1
+  val EXERSISE_C_2_3_2=MainC24A
+
+  val selector=EXERSISE_C_2_3_2
   def main(args: Array[String]): Unit = {
     selector.main(args)
 

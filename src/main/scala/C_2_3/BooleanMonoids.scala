@@ -16,8 +16,13 @@ object OrMonoid{
 
 object MainC23A {
   import OrMonoid._
+  import AndMonoid._
   def main(args: Array[String]): Unit = {
-    val and=Monoid.apply[Boolean]
+    val andMon = AndMonoid.andMonoid
+    val orMon = OrMonoid.orMonoid
+    val or=Monoid.apply[Boolean](orMon)
+    val and=Monoid.apply[Boolean](andMon)
+    print(or.combine(true,false))
     print(and.combine(true,false))
   }
 }
