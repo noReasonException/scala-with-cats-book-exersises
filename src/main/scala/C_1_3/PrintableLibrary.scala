@@ -23,7 +23,7 @@ object Printable{
 }
 
 
-object FakeMainC13A {
+object MainC13A {
   import Printable._
   import PrintableLibraryInstances._
   def main(args: Array[String]): Unit = {

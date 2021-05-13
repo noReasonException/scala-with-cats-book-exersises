@@ -10,7 +10,7 @@ case class Cat(name:String,age:Int,color:String)
 object Cat{
   implicit val catShowInstance:Show[Cat] = Show.show(cat=>cat.name+" is an "+cat.age+" year old "+cat.color+" cat")
 }
-object FakeMainC14B {
+object MainC14B {
   def main(args: Array[String]): Unit = {
     println(Cat("zuko",1,"black-white").show)
   }

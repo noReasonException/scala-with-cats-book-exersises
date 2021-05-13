@@ -7,7 +7,7 @@ import cats.instances.string._
 
 
 
-object FakeMainC14A {
+object MainC14A {
   def main(args: Array[String]): Unit = {
     println("he".show)
     println(12.show)

@@ -12,7 +12,7 @@ case class Cat(name:String,age:Int,color:String)
 object Cat{
   implicit val catEq=Eq.instance[Cat]{(a,b)=>a.name===b.name&&a.age===b.age&&a.color===b.color}
 }
-object FakeMainC15A {
+object MainC15A {
   def main(args: Array[String]): Unit = {
 
     val a = Cat("zuko",1,"black-white")

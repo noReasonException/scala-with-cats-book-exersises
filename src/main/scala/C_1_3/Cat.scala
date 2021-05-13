@@ -8,7 +8,7 @@ object Cat{
       strPrintable.format(a.name)+" is an "+intPrintable.format(a.age)+" year old "+strPrintable.format(a.color)+" cat"
   }
 }
-object FakeMainC13B{
+object MainC13B{
   import Printable._
   import PrintableLibraryInstances._
   def main(args: Array[String]): Unit = {
