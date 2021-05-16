@@ -5,6 +5,8 @@ import C_1_5.MainC15A
 import C_2_3.MainC23A
 import C_2_4.MainC24A
 import C_2_5.MainC25A
+import C_3_5.MainC35A
+import C_4_1.MainC41A
 import cats.Show
 import cats.instances.int._
 import cats.syntax.show._
@@ -26,7 +28,15 @@ object Main {
   val EXERSISE_C_2_3_1=MainC23A
   val EXERSISE_C_2_3_2=MainC24A
   val EXERSISE_C_2_5_1=MainC25A
-  val selector=EXERSISE_C_2_5_1
+
+  //chapter3
+  val EXERSISE_C_3_5=MainC35A
+
+  //chapter 4
+  val EXERSISE_C_4_1=MainC41A
+
+
+  val selector=EXERSISE_C_3_5
   def main(args: Array[String]): Unit = {
     selector.main(args)
 
