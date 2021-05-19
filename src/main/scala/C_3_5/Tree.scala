@@ -34,9 +34,9 @@ final case class Leaf[A](value:A) extends Tree[A]
 object MainC35A{
   import Functor._
   def main(args: Array[String]): Unit = {
-    val tree = Branch(Branch(Leaf(11),Leaf(2)),Leaf(200))
+    /*val tree = Branch(Branch(Leaf(11),Leaf(2)),Leaf(200))
     val treeFn = Functor.treeFunctor
     val mapped=treeFn.map(tree)((a)=>a.toString+" mapped ")
-    println(mapped)
+    println(mapped)*/
   }
 }

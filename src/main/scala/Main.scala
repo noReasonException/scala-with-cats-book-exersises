@@ -6,6 +6,7 @@ import C_2_3.MainC23A
 import C_2_4.MainC24A
 import C_2_5.MainC25A
 import C_3_5.MainC35A
+import C_3_6.MainC36A
 import C_4_1.MainC41A
 import C_4_3.MainC43A
 import cats.Show
@@ -32,6 +33,7 @@ object Main {
 
   //chapter3
   val EXERSISE_C_3_5=MainC35A
+  val EXERSISE_C_3_6=MainC36A
 
   //chapter 4
   val EXERSISE_C_4_1=MainC41A
