@@ -1,0 +1,12 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Exersise1, org.scalatest.tools.Framework$$anon$1@159aa0ec, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mExersise1:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA Stack[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should pop values in last-in-first-out order[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should throw NoSuchElementException if an empty stack is popped[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 429 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 2[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 2, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Exersise1[0m
