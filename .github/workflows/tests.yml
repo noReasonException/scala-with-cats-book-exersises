@@ -1,7 +1,7 @@
 name: scala-with-cats-exersises-testAll
 on: [push]
 jobs:
-  deploy:
+  unit-tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
