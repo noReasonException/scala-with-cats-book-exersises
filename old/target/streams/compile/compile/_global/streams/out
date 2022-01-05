@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/stefanos.stefanou/Desktop/repos/scala-with-cats-book-exersises/src/main/scala/C_2_3/AndMonoid.scala:14:31: could not find implicit value for parameter monoid: C_2_3.Monoid[Boolean][0m
+[0m[[0m[31merror[0m] [0m[0m    val andMonoid=Monoid.apply[Boolean][0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
