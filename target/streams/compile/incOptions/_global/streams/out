@@ -2,5 +2,38 @@
 [0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
 [0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
 [0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Exersise1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	B_PrintableLibrary.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Printable$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsonWriterInstances$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsNull$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsObject$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Json.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsonWriterInstances$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	B_PrintableLibrary$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Printable.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PrintableInstances.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsArray$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsonWriterInstances$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Json$JsonOps.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsInt.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsString$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsArray.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Json2$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PrintableInstances$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsString.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsNull.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Json2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Cat.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Cat$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PrintableInstances$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Json$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsInt$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsObject.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsonWriter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	JsonWriterInstances.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PrintableInstances$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Printable$PrintableOps.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PrintableInstances$$anon$3.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /Users/stefanosstefanou/Desktop/repos/scala-with-cats-book-exersises/target/scala-2.13/classes.bak[0m

@@ -8,7 +8,7 @@ import org.scalatest.matchers._
 
 import scala.collection.mutable.Stack
 
-class ChapterTheory extends AnyFlatSpec with should.Matchers {
+class A_ChapterTheory extends AnyFlatSpec with should.Matchers {
 
   import JsonWriterInstances._
   import Json._

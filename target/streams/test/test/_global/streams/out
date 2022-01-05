@@ -1,12 +1,20 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Exersise1, org.scalatest.tools.Framework$$anon$1@159aa0ec, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mExersise1:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mA Stack[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should pop values in last-in-first-out order[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should throw NoSuchElementException if an empty stack is popped[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 429 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 2[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 2, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(co.uk.noreasonexception.exersise.chapterone.A_ChapterTheory, org.scalatest.tools.Framework$$anon$1@736d5c54, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(co.uk.noreasonexception.exersise.chapterone.B_PrintableLibrary, org.scalatest.tools.Framework$$anon$1@736d5c54, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mB_PrintableLibrary:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA cat[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be able to formatted correctly[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA_ChapterTheory:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA string[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be able to be converted to a JsString using extension methods[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA None:Option[T][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be able to be converted to JsNull given an JsonWriter[T] in implicit scope[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mA Some("hello-world"):Option[T][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be able to be converted to JsString given an JsonWriter[T] in implicit scope[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 410 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 4, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Exersise1[0m
+[0m[[0m[0mdebug[0m] [0m[0m	co.uk.noreasonexception.exersise.chapterone.B_PrintableLibrary[0m
+[0m[[0m[0mdebug[0m] [0m[0m	co.uk.noreasonexception.exersise.chapterone.A_ChapterTheory[0m
