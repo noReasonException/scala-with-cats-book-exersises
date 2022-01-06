@@ -1,20 +1,7 @@
 package co.uk.noreasonexception
 package exersises.chaptertwo
 
-
-/**
- * Type class
- * Implementations
- * Interface Object or Interface Syntax
- *
- */
-
-trait Semigroup[A]{
-  def combine(first:A,second:A):A
-}
-trait Monoid[A] extends Semigroup[A]{
-  def empty:A
-}
+import exersises.chaptertwo.common.Monoid
 
 object MonoidAnd{
   implicit val andMonoid:Monoid[Boolean]=new Monoid[Boolean] {
@@ -40,12 +27,7 @@ object MonoidXNor{
     override def combine(first: Boolean, second: Boolean): Boolean = !(first^second)
   }
 }
-object Monoid{
-  implicit class MonoidOps[A](maybeMonoid:A){
-    def combine(maybeAnother:A)(implicit monoidInstance:Monoid[A]):A=monoidInstance.combine(maybeMonoid,maybeAnother)
-  }
-  def empty[A](implicit monoid: Monoid[A]) = monoid.empty
-}
+
 
 
 

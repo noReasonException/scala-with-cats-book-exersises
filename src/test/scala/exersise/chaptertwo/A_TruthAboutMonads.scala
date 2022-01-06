@@ -1,12 +1,10 @@
 package co.uk.noreasonexception
 package exersise.chaptertwo
 
-import exersises.chapterone.{Cat2, Cat3}
-
-import cats.syntax.show._
 import co.uk.noreasonexception.exersises.chaptertwo._
 import org.scalatest.flatspec._
 import org.scalatest.matchers._
+import co.uk.noreasonexception.exersises.chaptertwo.common.Monoid
 
 class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
   
@@ -28,7 +26,7 @@ class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
     false.combine(Monoid.empty[Boolean]) shouldEqual false
 
   }
-  "A AndMonad" should "obey Associative Law Law" in {
+  "A AndMonad" should "obey Associative Law" in {
     import Monoid._
     import MonoidAnd._
 
@@ -53,7 +51,7 @@ class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
     false.combine(Monoid.empty[Boolean]) shouldEqual false
 
   }
-  "A OrMonad" should "obey Associative Law Law" in {
+  "A OrMonad" should "obey Associative Law" in {
     import Monoid._
     import MonoidOr._
 
@@ -78,7 +76,7 @@ class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
     false.combine(Monoid.empty[Boolean]) shouldEqual false
 
   }
-  "A XorMonad" should "obey Associative Law Law" in {
+  "A XorMonad" should "obey Associative Law" in {
     import Monoid._
     import MonoidXor._
 
@@ -102,7 +100,7 @@ class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
     false.combine(Monoid.empty[Boolean]) shouldEqual false
 
   }
-  "A XNorMonad" should "obey Associative Law Law" in {
+  "A XNorMonad" should "obey Associative Law" in {
     import Monoid._
     import MonoidXNor._
 
