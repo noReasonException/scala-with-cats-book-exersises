@@ -5,7 +5,7 @@ import co.uk.noreasonexception.exersises.chaptertwo._
 import org.scalatest.flatspec._
 import org.scalatest.matchers._
 import co.uk.noreasonexception.exersises.chaptertwo.common.Monoid
-
+import co.uk.noreasonexception.exersises.chaptertwo.common.Semigroup._
 class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
   
 

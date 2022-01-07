@@ -6,7 +6,7 @@ import exersises.chaptertwo.common.Monoid
 
 import org.scalatest.flatspec._
 import org.scalatest.matchers._
-
+import co.uk.noreasonexception.exersises.chaptertwo.common.Semigroup._
 class B_TruthAboutSets extends AnyFlatSpec with should.Matchers {
 
 
