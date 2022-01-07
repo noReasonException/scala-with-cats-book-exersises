@@ -36,7 +36,7 @@ object A_TruthAboutMonads {
   import MonoidAnd._
 
   def main(args: Array[String]): Unit = {
-    print(true.combine(false).combine(empty))
+
   }
 
 }

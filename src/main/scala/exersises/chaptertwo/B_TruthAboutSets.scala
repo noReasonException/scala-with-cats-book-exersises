@@ -26,11 +26,7 @@ object SetSemigroups{
 
 
 object B_TruthAboutSets {
-  import Monoid._
-  import MonoidAnd._
-
   def main(args: Array[String]): Unit = {
-    print(true.combine(false).combine(empty))
-  }
 
+  }
 }
