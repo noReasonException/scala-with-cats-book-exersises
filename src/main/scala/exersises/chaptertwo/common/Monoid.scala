@@ -7,7 +7,7 @@ trait Monoid[A] extends Semigroup[A]{
 }
 object Monoid{
   implicit class MonoidOps[A](maybeMonoid:A){
-    def combine(maybeAnother:A)(implicit monoidInstance:Monoid[A]):A=monoidInstance.combine(maybeMonoid,maybeAnother)
+    def combine(maybeAnother:A)(implicit monoidInstance:Semigroup[A]):A=monoidInstance.combine(maybeMonoid,maybeAnother)
   }
   def empty[A](implicit monoid: Monoid[A]) = monoid.empty
 }
