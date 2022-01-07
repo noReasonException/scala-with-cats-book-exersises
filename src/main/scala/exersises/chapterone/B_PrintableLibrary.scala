@@ -1,7 +1,6 @@
 package co.uk.noreasonexception
 package exersises.chapterone
 
-
 //Scala provides a toString method to let us convert any value to a String.
 //However, this method comes with a few disadvantages: it is implemented for
 //every type in the language, many implementations are of limited use, and we
@@ -16,45 +15,49 @@ package exersises.chapterone
 //ing type. It uses the relevant Printable to convert the A to a String.
 //print accepts the same parameters as format and returns Unit. It
 //prints the formatted A value to the console using println.
-trait Printable[A]{
-  def format(obj:A):String
+trait Printable[A] {
+  def format(obj: A): String
 }
-object PrintableInstances{
-  implicit val printableInstanceForInt={
+object PrintableInstances {
+  implicit val printableInstanceForInt = {
     new Printable[Int] {
-      def format(obj:Int):String=obj.toString
+      def format(obj: Int): String = obj.toString
     }
   }
-  implicit val printableInstanceForStr={
+  implicit val printableInstanceForStr = {
     new Printable[String] {
-      def format(obj:String):String=obj
+      def format(obj: String): String = obj
     }
   }
-  implicit def printableInstanceForCat(implicit intPrintable:Printable[Int],strPrintable:Printable[String])={
+  implicit def printableInstanceForCat(implicit
+      intPrintable: Printable[Int],
+      strPrintable: Printable[String]
+  ) = {
     new Printable[Cat] {
       override def format(obj: Cat): String =
-        strPrintable.format(obj.name)+" is a "+
-          intPrintable.format(obj.age)+" year-old "+
-          strPrintable.format(obj.color)+" cat"
+        strPrintable.format(obj.name) + " is a " +
+          intPrintable.format(obj.age) + " year-old " +
+          strPrintable.format(obj.color) + " cat"
     }
   }
 
 }
-object Printable{
-  implicit class PrintableOps[A](obj:A) {
-    def format(implicit printableInstance:Printable[A])=printableInstance.format(obj)
-    def consolePrint(implicit printableInstance:Printable[A])=print(format)
+object Printable {
+  implicit class PrintableOps[A](obj: A) {
+    def format(implicit printableInstance: Printable[A]) =
+      printableInstance.format(obj)
+    def consolePrint(implicit printableInstance: Printable[A]) = print(format)
   }
 
 }
 //Application
-case class Cat(name:String,age:Int,color:String)
+case class Cat(name: String, age: Int, color: String)
 
-object B_PrintableLibrary{
+object B_PrintableLibrary {
   import PrintableInstances._
   import Printable._
   def main(args: Array[String]): Unit = {
-    val cat = Cat("Zuko",1,"Black and white")
+    val cat = Cat("Zuko", 1, "Black and white")
     print(cat.format)
   }
 

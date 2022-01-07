@@ -1,5 +1,3 @@
 package A_Playground
 
-object PlayMain {
-
-}
+object PlayMain {}

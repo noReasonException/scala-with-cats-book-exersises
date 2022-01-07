@@ -9,7 +9,6 @@ import org.scalatest.matchers._
 import co.uk.noreasonexception.exersises.chaptertwo.common.Semigroup._
 class B_TruthAboutSets extends AnyFlatSpec with should.Matchers {
 
-
   "A UnionMonad" should "combine two sets" in {
     import SetMonoids._
     import Monoid._
@@ -28,7 +27,6 @@ class B_TruthAboutSets extends AnyFlatSpec with should.Matchers {
     Monoid.empty[Set[Int]].combine(set) shouldEqual set
   }
 
-
   "A UnionMonad" should "obey Associative Law" in {
     import Monoid._
     import SetMonoids._
@@ -36,7 +34,9 @@ class B_TruthAboutSets extends AnyFlatSpec with should.Matchers {
     val first: Set[Int] = (1 :: 2 :: Nil).toSet
     val second: Set[Int] = (2 :: 3 :: Nil).toSet
 
-    first.combine(second.combine(Monoid.empty[Set[Int]])) shouldEqual first.combine(second).combine(Monoid.empty[Set[Int]])
+    first.combine(second.combine(Monoid.empty[Set[Int]])) shouldEqual first
+      .combine(second)
+      .combine(Monoid.empty[Set[Int]])
 
   }
 
@@ -57,9 +57,10 @@ class B_TruthAboutSets extends AnyFlatSpec with should.Matchers {
     val second: Set[Int] = (2 :: 3 :: Nil).toSet
     val third: Set[Int] = (2 :: 3 :: Nil).toSet
 
-    first.combine(second.combine(third)) shouldEqual (first.combine(second)).combine(third)
+    first.combine(second.combine(third)) shouldEqual (first
+      .combine(second))
+      .combine(third)
 
   }
-
 
 }

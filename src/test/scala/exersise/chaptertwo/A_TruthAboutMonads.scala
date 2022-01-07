@@ -7,7 +7,6 @@ import org.scalatest.matchers._
 import co.uk.noreasonexception.exersises.chaptertwo.common.Monoid
 import co.uk.noreasonexception.exersises.chaptertwo.common.Semigroup._
 class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
-  
 
   "A AndMonad" should "obey And truth table" in {
     import Monoid._
@@ -30,7 +29,9 @@ class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
     import Monoid._
     import MonoidAnd._
 
-    true.combine(false.combine(true)) shouldEqual (true.combine(false).combine(true))
+    true.combine(false.combine(true)) shouldEqual (true
+      .combine(false)
+      .combine(true))
 
   }
 //----
@@ -55,7 +56,9 @@ class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
     import Monoid._
     import MonoidOr._
 
-    true.combine(false.combine(true)) shouldEqual (true.combine(false).combine(true))
+    true.combine(false.combine(true)) shouldEqual (true
+      .combine(false)
+      .combine(true))
 
   }
   //----
@@ -80,7 +83,9 @@ class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
     import Monoid._
     import MonoidXor._
 
-    true.combine(false.combine(true)) shouldEqual (true.combine(false).combine(true))
+    true.combine(false.combine(true)) shouldEqual (true
+      .combine(false)
+      .combine(true))
 
   }
   "A XNorMonad" should "obey XNor truth table" in {
@@ -104,7 +109,9 @@ class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
     import Monoid._
     import MonoidXNor._
 
-    true.combine(false.combine(true)) shouldEqual (true.combine(false).combine(true))
+    true.combine(false.combine(true)) shouldEqual (true
+      .combine(false)
+      .combine(true))
 
   }
 }
