@@ -19,8 +19,6 @@ object Adder{
 object C_SuperAdderV1 {
   import Adder._
 
-
-
   def main(args: Array[String]): Unit = {
     println(addV1(List(1,2,3,4)))
     println(addV2(List(Some(1),Some(2),Some(3),None,Some(4))))
