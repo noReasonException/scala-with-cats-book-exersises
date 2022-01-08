@@ -1,5 +1,5 @@
 package co.uk.noreasonexception
-package exersises.chaptertwo
+package exersises.ch2_monoids_semigroups
 
 import cats.syntax.semigroup._
 import cats.{Monoid, Semigroup}

@@ -1,5 +1,5 @@
 package co.uk.noreasonexception
-package exersises.chaptertwo.common
+package exersises.ch2_monoids_semigroups.common
 
 trait Monoid[A] extends Semigroup[A] {
   def empty: A

@@ -1,11 +1,11 @@
 package co.uk.noreasonexception
-package exersise.chaptertwo
+package exersise.ch2_monoids_semigroups
 
-import co.uk.noreasonexception.exersises.chaptertwo._
+import co.uk.noreasonexception.exersises.ch2_monoids_semigroups._
 import org.scalatest.flatspec._
 import org.scalatest.matchers._
-import co.uk.noreasonexception.exersises.chaptertwo.common.Monoid
-import co.uk.noreasonexception.exersises.chaptertwo.common.Semigroup._
+import co.uk.noreasonexception.exersises.ch2_monoids_semigroups.common.Monoid
+import co.uk.noreasonexception.exersises.ch2_monoids_semigroups.common.Semigroup._
 class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
 
   "A AndMonad" should "obey And truth table" in {

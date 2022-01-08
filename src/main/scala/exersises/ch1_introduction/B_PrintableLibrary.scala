@@ -1,5 +1,5 @@
 package co.uk.noreasonexception
-package exersises.chapterone
+package exersises.ch1_introduction
 
 //Scala provides a toString method to let us convert any value to a String.
 //However, this method comes with a few disadvantages: it is implemented for

@@ -1,9 +1,9 @@
 package co.uk.noreasonexception
-package exersise.chaptertwo
+package exersise.ch2_monoids_semigroups
 
-import exersises.chaptertwo._
-import exersises.chaptertwo.common.Monoid
-import exersises.chaptertwo.common.Semigroup._
+import exersises.ch2_monoids_semigroups._
+import exersises.ch2_monoids_semigroups.common.Monoid
+import exersises.ch2_monoids_semigroups.common.Semigroup._
 
 import org.scalatest.flatspec._
 import org.scalatest.matchers._

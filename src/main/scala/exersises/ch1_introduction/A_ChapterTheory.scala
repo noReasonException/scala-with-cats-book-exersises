@@ -1,5 +1,5 @@
 package co.uk.noreasonexception
-package exersises.chapterone
+package exersises.ch1_introduction
 
 /** Type class contain The trait itself Implementations of the trait, implicit
   * Implicit parameters of those implementations Extension methods, implicit

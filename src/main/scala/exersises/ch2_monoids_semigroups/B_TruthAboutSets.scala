@@ -1,7 +1,7 @@
 package co.uk.noreasonexception
-package exersises.chaptertwo
+package exersises.ch2_monoids_semigroups
 
-import exersises.chaptertwo.common.{Monoid, Semigroup}
+import exersises.ch2_monoids_semigroups.common.{Monoid, Semigroup}
 
 /** Sets common operations Union Definetely a semigroup, monoid with empty set
   * Complement Cannot be a monoid as it involves only one Set(And the reference

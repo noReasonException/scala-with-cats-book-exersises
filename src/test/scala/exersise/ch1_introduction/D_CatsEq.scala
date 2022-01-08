@@ -1,7 +1,7 @@
 package co.uk.noreasonexception
-package exersise.chapterone
+package exersise.ch1_introduction
 
-import exersises.chapterone.{Cat2, Cat3}
+import exersises.ch1_introduction.{Cat2, Cat3}
 
 import cats.syntax.show._
 import org.scalatest.flatspec._

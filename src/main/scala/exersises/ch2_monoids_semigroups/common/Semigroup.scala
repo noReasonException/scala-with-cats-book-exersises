@@ -1,5 +1,5 @@
 package co.uk.noreasonexception
-package exersises.chaptertwo.common
+package exersises.ch2_monoids_semigroups.common
 
 trait Semigroup[A] {
   def combine(first: A, second: A): A

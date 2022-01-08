@@ -1,7 +1,7 @@
 package co.uk.noreasonexception
-package exersise.chapterone
+package exersise.ch1_introduction
 
-import exersises.chapterone.{Cat, Cat2, Printable, PrintableInstances}
+import exersises.ch1_introduction.{Cat, Cat2, Printable, PrintableInstances}
 
 import org.scalatest.flatspec._
 import org.scalatest.matchers._
@@ -10,7 +10,7 @@ import cats.syntax.show._
 
 class C_CatsShow extends AnyFlatSpec with should.Matchers {
 
-  import exersises.chapterone.Cat2._
+  import exersises.ch1_introduction.Cat2._
 
   "A cat" should "be able to formatted correctly" in {
     val cat = Cat2("Zuko", 1, "Black and white")

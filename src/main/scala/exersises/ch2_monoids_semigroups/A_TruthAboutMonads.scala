@@ -1,7 +1,7 @@
 package co.uk.noreasonexception
-package exersises.chaptertwo
+package exersises.ch2_monoids_semigroups
 
-import exersises.chaptertwo.common.Monoid
+import exersises.ch2_monoids_semigroups.common.Monoid
 
 object MonoidAnd {
   implicit val andMonoid: Monoid[Boolean] = new Monoid[Boolean] {

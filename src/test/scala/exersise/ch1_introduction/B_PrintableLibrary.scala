@@ -1,7 +1,7 @@
 package co.uk.noreasonexception
-package exersise.chapterone
+package exersise.ch1_introduction
 
-import co.uk.noreasonexception.exersises.chapterone.{
+import co.uk.noreasonexception.exersises.ch1_introduction.{
   Cat,
   JsNull,
   JsString,

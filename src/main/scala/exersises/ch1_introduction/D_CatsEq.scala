@@ -1,5 +1,5 @@
 package co.uk.noreasonexception
-package exersises.chapterone
+package exersises.ch1_introduction
 
 import cats.Show
 import cats.kernel.Eq
