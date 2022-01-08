@@ -8,13 +8,13 @@ sealed trait Tree[+A]
 
 case class Branch[+A](left: Tree[A], right: Tree[A]) extends Tree[A]
 
-case class Leaf[+A](a: A) extends Tree[A]
+case class Leaf[+A](value: A) extends Tree[A]
 
 object Tree {
   implicit val treeFunctor: Functor[Tree] = new Functor[Tree] {
-    override def map[A, B](fa: Tree[A])(f: A => B): Tree[B] = fa match {
+    override def map[A, B](tree: Tree[A])(f: A => B): Tree[B] = tree match {
       case Branch(left, right) => Branch(map(left)(f), map(right)(f))
-      case Leaf(a) => Leaf(f(a))
+      case Leaf(value) => Leaf(f(value))
     }
   }
 }
@@ -23,6 +23,6 @@ object A_BranchingOutFunctors {
   import Tree._
   def main(args: Array[String]): Unit = {
     val intTree: Tree[Int] = Branch(Leaf(12), Branch(Leaf(12), Leaf(12)))
-    println(intTree.map(_.toString + "HelloWorld"))
+    println(intTree.map(_.toString + "!"))
   }
 }

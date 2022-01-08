@@ -55,8 +55,8 @@ object Json {
 }
 //Interface Object
 object Json2 {
-  def asJson[T](t: T)(implicit jsonWriter: JsonWriter[T]): Json =
-    jsonWriter.write(t)
+  def asJson[T](any: T)(implicit jsonWriter: JsonWriter[T]): Json =
+    jsonWriter.write(any)
 }
 
 object Main {

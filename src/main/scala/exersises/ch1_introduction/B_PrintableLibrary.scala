@@ -16,17 +16,17 @@ package exersises.ch1_introduction
 //print accepts the same parameters as format and returns Unit. It
 //prints the formatted A value to the console using println.
 trait Printable[A] {
-  def format(obj: A): String
+  def format(any: A): String
 }
 object PrintableInstances {
   implicit val printableInstanceForInt = {
     new Printable[Int] {
-      def format(obj: Int): String = obj.toString
+      def format(any: Int): String = any.toString
     }
   }
   implicit val printableInstanceForStr = {
     new Printable[String] {
-      def format(obj: String): String = obj
+      def format(any: String): String = any
     }
   }
   implicit def printableInstanceForCat(implicit
@@ -34,18 +34,18 @@ object PrintableInstances {
       strPrintable: Printable[String]
   ) = {
     new Printable[Cat] {
-      override def format(obj: Cat): String =
-        strPrintable.format(obj.name) + " is a " +
-          intPrintable.format(obj.age) + " year-old " +
-          strPrintable.format(obj.color) + " cat"
+      override def format(any: Cat): String =
+        strPrintable.format(any.name) + " is a " +
+          intPrintable.format(any.age) + " year-old " +
+          strPrintable.format(any.color) + " cat"
     }
   }
 
 }
 object Printable {
-  implicit class PrintableOps[A](obj: A) {
+  implicit class PrintableOps[A](any: A) {
     def format(implicit printableInstance: Printable[A]) =
-      printableInstance.format(obj)
+      printableInstance.format(any)
     def consolePrint(implicit printableInstance: Printable[A]) = print(format)
   }
 

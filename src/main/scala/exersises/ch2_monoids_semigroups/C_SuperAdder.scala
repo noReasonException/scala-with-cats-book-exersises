@@ -6,8 +6,8 @@ import cats.{Monoid, Semigroup}
 
 case class Order(totalCost: Double, quantity: Double)
 object Order {
-  private def combineOrder: (Order, Order) => Order = (a, b) =>
-    Order(a.totalCost + b.totalCost, a.quantity + b.quantity)
+  private def combineOrder: (Order, Order) => Order = (first, second) =>
+    Order(first.totalCost + second.totalCost, first.quantity + second.quantity)
   implicit val semigroupOrder: cats.Semigroup[Order] =
     Semigroup.instance(combineOrder)
   implicit val monoidOrder: cats.Monoid[Order] =
@@ -15,8 +15,8 @@ object Order {
 }
 object Adder {
   def addV1(numbers: List[Int]): Int = numbers.foldLeft(0)(_ + _)
-  def addV2[A](numbers: List[A])(implicit monoid: Monoid[A]): A =
-    numbers.foldLeft(monoid.empty)(_ |+| _)
+  def addV2[A](listOfAny: List[A])(implicit monoid: Monoid[A]): A =
+    listOfAny.foldLeft(monoid.empty)(_ |+| _)
 
 }
 

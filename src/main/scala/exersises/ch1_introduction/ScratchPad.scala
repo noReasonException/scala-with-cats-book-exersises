@@ -14,27 +14,27 @@ object ScratchPad {
     */
 
   trait JsonWriter[-A] {
-    def format(a: A): String
+    def format(any: A): String
 
   }
 
-  def format[A](a: A)(implicit jw: JsonWriter[A]): String = {
-    jw.format(a)
+  def format[A](any: A)(implicit jw: JsonWriter[A]): String = {
+    jw.format(any)
   }
 
   implicit val squareWriter: JsonWriter[Square] = new JsonWriter[Square] {
-    override def format(a: Square): String = "SQUARE"
+    override def format(square: Square): String = "SQUARE"
   }
 
   implicit val shapeWriter: JsonWriter[Shape] = new JsonWriter[Shape] {
-    override def format(a: Shape): String = "SHAPE"
+    override def format(shape: Shape): String = "SHAPE"
   }
 
   def main(args: Array[String]): Unit = {
-    val sq: Square = Square()
-    val sh: Shape = new Shape()
+    val square: Square = Square()
+    val shape: Shape = new Shape()
 
-    format(sq)(squareWriter)
+    format(square)(squareWriter)
   }
 
 }

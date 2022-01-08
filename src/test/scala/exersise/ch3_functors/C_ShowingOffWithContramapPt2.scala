@@ -9,7 +9,7 @@ class C_ShowingOffWithContramapPt2 extends AnyFlatSpec with should.Matchers {
 
   "Contravariant Functor" should "work as expected" in {
 
-    import co.uk.noreasonexception.exersises.ch3_functors.Printable2._
+    import co.uk.noreasonexception.exersises.ch3_functors.PrintableC._
 
     val strToInt: Double => Int = _.toInt
     val strIntInstanceToInt = instance[Int].contraMap(strToInt)
@@ -20,7 +20,7 @@ class C_ShowingOffWithContramapPt2 extends AnyFlatSpec with should.Matchers {
   }
   "Box value class functor" should "work as expected" in {
 
-    import co.uk.noreasonexception.exersises.ch3_functors.Printable2._
+    import co.uk.noreasonexception.exersises.ch3_functors.PrintableC._
 
     val subject = Box(12)
     val expected = 12

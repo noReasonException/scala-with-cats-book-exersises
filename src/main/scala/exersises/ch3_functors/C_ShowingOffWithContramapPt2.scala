@@ -1,33 +1,34 @@
 package co.uk.noreasonexception
 package exersises.ch3_functors
 
-trait Printable2[A] {
+trait PrintableC[A] {
   self =>
-  def format(a: A): String
-  def contraMap[B](f: B => A): Printable2[B] = new Printable2[B] {
-    override def format(b: B): String = self.format(f(b))
+  def format(any: A): String
+  def contraMap[B](f: B => A): PrintableC[B] = new PrintableC[B] {
+    override def format(any: B): String = self.format(f(any))
   }
 }
-case class Box[A](a: A)
+case class Box[A](value: A)
 
-object Printable2 {
-  implicit val intPrintable: Printable2[Int] = new Printable2[Int] {
-    override def format(a: Int): String = a.toString
+object PrintableC {
+  implicit val intPrintable: PrintableC[Int] = new PrintableC[Int] {
+    override def format(value: Int): String = value.toString
   }
   implicit def boxPrintable[A](implicit
-      innerPrintable: Printable2[A]
-  ): Printable2[Box[A]] = innerPrintable.contraMap[Box[A]](_.a)
+      innerPrintable: PrintableC[A]
+  ): PrintableC[Box[A]] = innerPrintable.contraMap[Box[A]](_.value)
 
-  implicit class PrintableOps2[A](a: A) {
-    def format(implicit printable: Printable2[A]): String = printable.format(a)
+  implicit class PrintableOps2[A](value: A) {
+    def format(implicit printable: PrintableC[A]): String =
+      printable.format(value)
 
   }
 
-  def instance[A](implicit printable: Printable2[A]): Printable2[A] = printable
+  def instance[A](implicit printable: PrintableC[A]): PrintableC[A] = printable
 }
 
 object C_ShowingOffWithContramapPt2 {
-  import Printable2._
+  import PrintableC._
   def main(args: Array[String]): Unit = {
     print(12.format)
 

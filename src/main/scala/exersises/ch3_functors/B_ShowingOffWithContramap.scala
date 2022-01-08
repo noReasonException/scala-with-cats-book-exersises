@@ -3,22 +3,22 @@ package exersises.ch3_functors
 
 trait Printable[A] {
   self =>
-  def format(a: A): String
+  def format(value: A): String
   def contraMap[B](f: B => A): Printable[B] = new Printable[B] {
-    override def format(b: B): String = self.format(f(b))
+    override def format(any: B): String = self.format(f(any))
   }
 }
 
 object Printable {
   implicit val intPrintable: Printable[Int] = new Printable[Int] {
-    override def format(a: Int): String = a.toString
+    override def format(value: Int): String = value.toString
   }
   implicit val strPrintable: Printable[String] = new Printable[String] {
-    override def format(a: String): String = a
+    override def format(value: String): String = value
   }
 
-  implicit class PrintableOps[A](a: A) {
-    def format(implicit printable: Printable[A]): String = printable.format(a)
+  implicit class PrintableOps[A](any: A) {
+    def format(implicit printable: Printable[A]): String = printable.format(any)
 
   }
 

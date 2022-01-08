@@ -12,10 +12,10 @@ object Cat2 {
       strShow: Show[String],
       intShow: Show[Int]
   ): Show[Cat2] = new Show[Cat2] {
-    override def show(obj: Cat2): String = {
-      strShow.show(obj.name) + " is a " +
-        intShow.show(obj.age) + " year-old " +
-        strShow.show(obj.color) + " cat"
+    override def show(any: Cat2): String = {
+      strShow.show(any.name) + " is a " +
+        intShow.show(any.age) + " year-old " +
+        strShow.show(any.color) + " cat"
     }
 
   }
