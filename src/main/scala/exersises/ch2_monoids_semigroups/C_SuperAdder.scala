@@ -21,6 +21,7 @@ object Adder {
 }
 
 object C_SuperAdderV1 {
+
   import Adder._
 
   def main(args: Array[String]): Unit = {
