@@ -1,8 +1,26 @@
 package co.uk.noreasonexception
 package exersises.ch4_monads.common
 
-/** trait Implementation Interface methods
-  */
+//┌────────────────┐              ┌────────────────┐
+//│                │              │                │
+//│                │              │                │
+//│  Monoid        ├──────────────►  cats.FlatMap  │
+//│                │              │      .flatMap()│
+//│                │              │                │
+//│                │              │                │
+//└────────┬───────┘              └────────────────┘
+//         │
+//         │
+//         │
+//         │                      ┌────────────────┐            ┌────────────────┐
+//         │                      │                │            │                │
+//         │                      │                │            │                │
+//         │                      │  Applicative   │            │  Functor       │
+//         └──────────────────────►      .pure()   ├────────────►      .flatMap()│
+//                                │                │            │                │
+//                                │                │            │                │
+//                                └────────────────┘            └────────────────┘
+
 trait Monad[F[_]] {
   def pure[A](value: A): F[A]
   def flatMap[A, B](value: F[A])(f: A => F[B]): F[B]
