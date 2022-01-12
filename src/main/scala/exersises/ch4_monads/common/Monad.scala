@@ -16,7 +16,7 @@ package exersises.ch4_monads.common
 //         │                      │                │            │                │
 //         │                      │                │            │                │
 //         │                      │  Applicative   │            │  Functor       │
-//         └──────────────────────►      .pure()   ├────────────►      .flatMap()│
+//         └──────────────────────►      .pure()   ├────────────►      .map()    │
 //                                │                │            │                │
 //                                │                │            │                │
 //                                └────────────────┘            └────────────────┘
@@ -33,14 +33,5 @@ object Monad {
     def flatMap[B](f: A => F[B])(implicit monad: Monad[F]): F[B] = {
       monad.flatMap(value)(f)
     }
-  }
-}
-object MonadInstances {
-  implicit def monadBox: Monad[Box] = new Monad[Box] {
-    override def pure[A](value: A): Box[A] = Box(value)
-
-    override def flatMap[A, B](value: Box[A])(f: A => Box[B]): Box[B] = f(
-      value.v
-    )
   }
 }

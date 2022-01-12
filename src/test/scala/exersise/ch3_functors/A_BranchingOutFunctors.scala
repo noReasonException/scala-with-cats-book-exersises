@@ -1,10 +1,11 @@
 package co.uk.noreasonexception
 package exersise.ch3_functors
 
-import co.uk.noreasonexception.exersises.ch3_functors.{Branch, Leaf, Tree}
 import org.scalatest.flatspec._
 import org.scalatest.matchers._
 import cats.implicits._
+import co.uk.noreasonexception.exersises.ch3_functors.common._
+import co.uk.noreasonexception.exersises.ch3_functors.TreeInstancesA._
 class A_BranchingOutFunctors extends AnyFlatSpec with should.Matchers {
 
   "TreeFunction" should "obey identity Law" in {

@@ -1,6 +1,8 @@
 package co.uk.noreasonexception
 package exersises.ch1_introduction
 
+import exersises.ch1_introduction.common.{Cat, Printable}
+
 //Scala provides a toString method to let us convert any value to a String.
 //However, this method comes with a few disadvantages: it is implemented for
 //every type in the language, many implementations are of limited use, and we
@@ -15,10 +17,8 @@ package exersises.ch1_introduction
 //ing type. It uses the relevant Printable to convert the A to a String.
 //print accepts the same parameters as format and returns Unit. It
 //prints the formatted A value to the console using println.
-trait Printable[A] {
-  def format(any: A): String
-}
-object PrintableInstances {
+
+object PrintableInstancesB {
   implicit val printableInstanceForInt = {
     new Printable[Int] {
       def format(any: Int): String = any.toString
@@ -50,11 +50,9 @@ object Printable {
   }
 
 }
-//Application
-case class Cat(name: String, age: Int, color: String)
 
 object B_PrintableLibrary {
-  import PrintableInstances._
+  import PrintableInstancesB._
   import Printable._
   def main(args: Array[String]): Unit = {
     val cat = Cat("Zuko", 1, "Black and white")

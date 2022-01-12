@@ -3,16 +3,8 @@ package exersises.ch2_monoids_semigroups
 
 import cats.syntax.semigroup._
 import cats.{Monoid, Semigroup}
+import co.uk.noreasonexception.exersises.ch2_monoids_semigroups.common.Order
 
-case class Order(totalCost: Double, quantity: Double)
-object Order {
-  private def combineOrder: (Order, Order) => Order = (first, second) =>
-    Order(first.totalCost + second.totalCost, first.quantity + second.quantity)
-  implicit val semigroupOrder: cats.Semigroup[Order] =
-    Semigroup.instance(combineOrder)
-  implicit val monoidOrder: cats.Monoid[Order] =
-    Monoid.instance(Order(0, 0), combineOrder)
-}
 object Adder {
   def addV1(numbers: List[Int]): Int = numbers.foldLeft(0)(_ + _)
   def addV2[A](listOfAny: List[A])(implicit monoid: Monoid[A]): A =

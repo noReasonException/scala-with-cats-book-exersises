@@ -1,19 +1,19 @@
 package co.uk.noreasonexception
 package exersise.ch1_introduction
 
-import exersises.ch1_introduction.{Cat, Cat2, Printable, PrintableInstances}
+import exersises.ch1_introduction.{Printable, PrintableInstancesB}
 
 import org.scalatest.flatspec._
 import org.scalatest.matchers._
 import cats.Show
 import cats.syntax.show._
+import co.uk.noreasonexception.exersises.ch1_introduction.common.Cat
 
 class C_CatsShow extends AnyFlatSpec with should.Matchers {
 
-  import exersises.ch1_introduction.Cat2._
-
   "A cat" should "be able to formatted correctly" in {
-    val cat = Cat2("Zuko", 1, "Black and white")
+    import exersises.ch1_introduction.CatInstancesC._
+    val cat = Cat("Zuko", 1, "Black and white")
     cat.show shouldBe "Zuko is a 1 year-old Black and white cat"
 
   }

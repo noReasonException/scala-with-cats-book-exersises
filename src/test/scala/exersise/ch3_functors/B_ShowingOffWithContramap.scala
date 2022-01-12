@@ -8,7 +8,7 @@ class B_ShowingOffWithContramap extends AnyFlatSpec with should.Matchers {
 
   "Contravariant Functor" should "work as expected" in {
 
-    import co.uk.noreasonexception.exersises.ch3_functors.Printable._
+    import co.uk.noreasonexception.exersises.ch3_functors.PrintableInstancesB._
 
     val strToInt: Double => Int = _.toInt
     val strIntInstanceToInt = instance[Int].contraMap(strToInt)

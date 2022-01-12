@@ -6,7 +6,7 @@ import org.scalatest.flatspec._
 import org.scalatest.matchers._
 import co.uk.noreasonexception.exersises.ch2_monoids_semigroups.common.Monoid
 import co.uk.noreasonexception.exersises.ch2_monoids_semigroups.common.Semigroup._
-class A_TruthAboutMonads extends AnyFlatSpec with should.Matchers {
+class A_TruthAboutMonoids extends AnyFlatSpec with should.Matchers {
 
   "A AndMonad" should "obey And truth table" in {
     import Monoid._

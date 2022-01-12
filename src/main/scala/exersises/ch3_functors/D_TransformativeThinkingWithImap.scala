@@ -1,16 +1,9 @@
 package co.uk.noreasonexception
 package exersises.ch3_functors
 
-trait Codec[A] { self =>
-  def encode(value: A): String
-  def decode(string: String): A
-  def imap[B](dec: A => B, enc: B => A): Codec[B] = new Codec[B] {
-    override def encode(value: B): String = self.encode(enc(value))
-    override def decode(str: String): B = dec(self.decode(str))
-  }
-}
+import exersises.ch3_functors.common.Codec
 
-object Codec {
+object CodecInstancesD {
   implicit val idCodec: Codec[String] = new Codec[String] {
     override def encode(value: String): String = value
 
@@ -31,7 +24,7 @@ object Codec {
 
 object D_TransformativeThinkingWithImap {
   def main(args: Array[String]): Unit = {
-    import Codec._
+    import CodecInstancesE._
     print(decode[Int]("12") + 12)
   }
 }

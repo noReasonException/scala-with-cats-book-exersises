@@ -4,12 +4,12 @@ package exersise.ch3_functors
 import org.scalatest.flatspec._
 import org.scalatest.matchers._
 import cats.implicits._
-import co.uk.noreasonexception.exersises.ch3_functors.Box
+import co.uk.noreasonexception.common.Box
 class C_ShowingOffWithContramapPt2 extends AnyFlatSpec with should.Matchers {
 
   "Contravariant Functor" should "work as expected" in {
 
-    import co.uk.noreasonexception.exersises.ch3_functors.PrintableC._
+    import co.uk.noreasonexception.exersises.ch3_functors.PrintableInstancesC._
 
     val strToInt: Double => Int = _.toInt
     val strIntInstanceToInt = instance[Int].contraMap(strToInt)
@@ -20,7 +20,7 @@ class C_ShowingOffWithContramapPt2 extends AnyFlatSpec with should.Matchers {
   }
   "Box value class functor" should "work as expected" in {
 
-    import co.uk.noreasonexception.exersises.ch3_functors.PrintableC._
+    import co.uk.noreasonexception.exersises.ch3_functors.PrintableInstancesC._
 
     val subject = Box(12)
     val expected = 12

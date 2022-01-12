@@ -1,15 +1,9 @@
 package co.uk.noreasonexception
 package exersises.ch3_functors
 
-trait Printable[A] {
-  self =>
-  def format(value: A): String
-  def contraMap[B](f: B => A): Printable[B] = new Printable[B] {
-    override def format(any: B): String = self.format(f(any))
-  }
-}
+import exersises.ch3_functors.common.Printable
 
-object Printable {
+object PrintableInstancesB {
   implicit val intPrintable: Printable[Int] = new Printable[Int] {
     override def format(value: Int): String = value.toString
   }
@@ -26,7 +20,7 @@ object Printable {
 }
 
 object B_ShowingOffWithContramap {
-  import Printable._
+  import PrintableInstancesB._
   def main(args: Array[String]): Unit = {
     print(12.format)
 

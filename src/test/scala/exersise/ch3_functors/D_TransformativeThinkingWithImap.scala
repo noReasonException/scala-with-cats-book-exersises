@@ -9,7 +9,7 @@ class D_TransformativeThinkingWithImap
     with should.Matchers {
 
   "Invariant Functor" should "work as expected" in {
-    import co.uk.noreasonexception.exersises.ch3_functors.Codec._
+    import co.uk.noreasonexception.exersises.ch3_functors.CodecInstancesE._
 
     decode[Int]("12") + 12 shouldBe 24
   }
