@@ -5,7 +5,7 @@ import org.scalatest.flatspec._
 import org.scalatest.matchers._
 import cats.implicits._
 import co.uk.noreasonexception.common.Box
-class A_GettingFucky extends AnyFlatSpec with should.Matchers {
+class B_GettingFucky extends AnyFlatSpec with should.Matchers {
 
   import co.uk.noreasonexception.exersises.ch4_monads.MonadInstancesA._
   import co.uk.noreasonexception.exersises.ch4_monads.common.Monad._
