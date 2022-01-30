@@ -1,7 +1,7 @@
 package co.uk.noreasonexception
 package exersises.ch3_functors.common
 
-trait Printable[A] {
+trait Printable[-A] {
   self =>
   def format(value: A): String
   def contraMap[B](f: B => A): Printable[B] = new Printable[B] {

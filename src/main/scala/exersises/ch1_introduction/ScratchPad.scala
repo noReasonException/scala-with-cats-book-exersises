@@ -15,8 +15,13 @@ object ScratchPad {
 
   trait JsonWriter[-A] {
     def format(any: A): String
-
   }
+
+  trait CustomOption[+A]
+
+  case class CustomSome[+A](v:A) extends CustomOption[A]
+
+  case object CustomNone extends CustomOption[Nothing]
 
   def format[A](any: A)(implicit jw: JsonWriter[A]): String = {
     jw.format(any)
