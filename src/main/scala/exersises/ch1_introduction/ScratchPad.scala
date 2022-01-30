@@ -19,7 +19,7 @@ object ScratchPad {
 
   trait CustomOption[+A]
 
-  case class CustomSome[+A](v:A) extends CustomOption[A]
+  case class CustomSome[+A](v: A) extends CustomOption[A]
 
   case object CustomNone extends CustomOption[Nothing]
 
