@@ -9,7 +9,6 @@ import scala.util.{Failure, Success, Try}
 
 class Letter_Description extends AnyFlatSpec with should.Matchers {
 
-
   "Template" should "follow universal logic" in {
     true shouldBe true
   }

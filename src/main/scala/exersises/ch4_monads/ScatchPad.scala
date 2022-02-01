@@ -14,7 +14,6 @@ object ScatchPad {
     val b = Vector("only").tell
     val c = 123.pure[LoggedResult]
 
-
     //evaluation strategy
     //        strict binding techiques(eveything evalueated before function invocation)
     //call by value
@@ -27,7 +26,6 @@ object ScatchPad {
     //Call by macro expansion
     //Call by future
     //Optimistic evaluation
-
 
     def one[A, B](a: A): Int = 12 //call by value
 
