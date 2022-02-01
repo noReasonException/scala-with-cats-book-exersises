@@ -1,45 +1,53 @@
 package co.uk.noreasonexception
 package exersises.ch4_monads
+import cats.syntax.writer._
+import cats.Eval
+import cats.data.Writer
+import cats.implicits.catsSyntaxApplicativeId
+import cats.syntax.applicative._
+import scala.annotation.tailrec
 
-import exersises.ch4_monads.common.Monad
+object ScatchPad {
+  type LoggedResult[A] = Writer[Vector[String], A]
 
-trait MonadError[F[_], E] extends Monad[F] {
-  def raiseError[A](e: E): F[A]
-  // Handle an error, potentially recovering from it:
-  def handleErrorWith[A](fa: F[A])(f: E => F[A]): F[A]
-  // Handle all errors, recovering from them:
-  def handleError[A](fa: F[A])(f: E => A): F[A]
-  // Test an instance of `F`,
-  // failing if the predicate is not satisfied:
-  def ensure[A](fa: F[A])(e: E)(f: A => Boolean): F[A]
+  def main(args: Array[String]): Unit = {
+    val b = Vector("only").tell
+    val c = 123.pure[LoggedResult]
+
+
+    //evaluation strategy
+    //        strict binding techiques(eveything evalueated before function invocation)
+    //call by value
+    //call by reference
+    //call by sharing (reference, but for objects)
+    //call by copy-restore
+    //        non-strict techniques
+    //call by need (lazy but memoized)
+    //call by name (lazy but not memoized)
+    //Call by macro expansion
+    //Call by future
+    //Optimistic evaluation
+
+
+    def one[A, B](a: A): Int = 12 //call by value
+
+    def two[A, B](a: => A): Int = 12 //call by name
+
+    def three[A, B](a: () => A): Int = 12 //call by value(copying function body)
+
+    //    print{
+    //      for{
+    //        first <- Vector("only").tell.map(_=>0)
+    //        second <- 123.pure[LoggedResult]
+    //      }yield first+second
+    //    }
+    //    println()
+    //    print{
+    //      for{
+    //        first <- Writer(Vector("msg1"),100)
+    //        second <- Writer(Vector("msg2"),200)
+    //      }yield(first+second)
+    //    }
+    //  }
+  }
 }
-
-//object MonadErrorInstancesD {
-//  type ErrorOr[A] = Either[Throwable, A]
-//
-//  implicit def errorOrMonadError[A]: MonadError[ErrorOr, A] =
-//    new MonadError[ErrorOr, A] {
-//      override def raiseError[A](e: A): ErrorOr[A] = ???
-//
-//      override def handleErrorWith[A](fa: ErrorOr[A])(
-//          f: A => ErrorOr[A]
-//      ): ErrorOr[A] = ???
-//
-//      override def handleError[A](fa: ErrorOr[A])(f: A => A): ErrorOr[A] = ???
-//
-//      override def ensure[A](fa: ErrorOr[A])(e: A)(
-//          f: A => Boolean
-//      ): ErrorOr[A] = ???
-//
-//      override def pure[A](value: A): ErrorOr[A] = Right(value)
-//
-//      override def flatMap[A, B](
-//          value: ErrorOr[A]
-//      )(f: A => ErrorOr[B]): ErrorOr[B] = {
-//        value match {
-//          case Right(value) => f(value)
-//          case _ => _
-//        }
-//      }
-//    }
-//}
