@@ -7,7 +7,7 @@ import cats.implicits.catsSyntaxApplicativeId
 import cats.syntax.applicative._
 import scala.annotation.tailrec
 
-object W_1_ScatchPad_Eval {
+object W_1_ScratchPad_Eval {
   type LoggedResult[A] = Writer[Vector[String], A]
 
   def main(args: Array[String]): Unit = {
