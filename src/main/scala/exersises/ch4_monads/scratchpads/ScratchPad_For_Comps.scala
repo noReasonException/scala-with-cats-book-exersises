@@ -1,12 +1,9 @@
 package co.uk.noreasonexception
-package exersises.ch4_monads
+package exersises.ch4_monads.scratchpads
 
-import cats.data.{State, Writer}
-import cats.implicits.catsSyntaxApplicativeId
-import cats.syntax.writer._
+import cats.data.State
 
-
-object W_2_ScratchPad_State {
+object ScratchPad_For_Comps {
 
   val x_plus_10:State[Int,Int]=State.apply(int=>{
     val result = int+10
@@ -19,10 +16,17 @@ object W_2_ScratchPad_State {
 
   val plus_and_pow = for{
     plus <- x_plus_10
-    //_ <- State.set(0)
     _ <- State.pure(12)
     pow <- x_pow_2
   }yield(pow)
+
+  val plus_and_pow_2 =
+    x_plus_10.flatMap(
+      res => x_pow_2.map(
+        res2 => res2
+      )
+    )
+  val ru = plus_and_pow_2.runA(12)
 
 
 

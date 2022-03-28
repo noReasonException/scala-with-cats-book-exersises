@@ -1,13 +1,9 @@
 package co.uk.noreasonexception
-package exersises.ch4_monads
-import cats.syntax.writer._
-import cats.Eval
-import cats.data.Writer
-import cats.implicits.catsSyntaxApplicativeId
-import cats.syntax.applicative._
-import scala.annotation.tailrec
+package exersises.ch4_monads.scratchpads
 
-object W_1_ScratchPad_Eval {
+import cats.data.Writer
+import cats.implicits._
+object ScratchPad_Eval {
   type LoggedResult[A] = Writer[Vector[String], A]
 
   def main(args: Array[String]): Unit = {
