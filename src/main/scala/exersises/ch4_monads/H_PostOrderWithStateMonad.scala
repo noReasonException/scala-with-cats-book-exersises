@@ -24,11 +24,9 @@ object H_PostOrderWithStateMonad{
   //1 2 + 3 + 6 + has result (12)
   //1 2 + 3 + 6   has result 6 and leftover state 6
   def evaluatePostOrder(expr:String):Int={
-    val computation = (for{
-      result <- chain(expr.split(" ").length,evalOne,expr)
-    }yield result)
-
-    computation.run(Nil).value._1.head.toInt
+    chain(expr.split(" ").length,evalOne,expr)
+      .run(Nil)
+      .value._1.head.toInt
   }
 
   def main(args:Array[String]):Unit={
