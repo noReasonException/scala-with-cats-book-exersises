@@ -40,7 +40,7 @@ object H_PostOrderWithStateMonad{
     val expression = "1 2 + 3 + 6 +"
     println(evaluatePostOrder(expression))
 
-    evaluatePostOrder((1 to 65000).mkString(" "))
+    print(evaluatePostOrder(expression))
   }
 
 
