@@ -31,12 +31,12 @@ object I_CreatingCustomMonads{
 //    /**
 //      * Thats the trivial non-stack-safe impl
 //      */
-//    override def tailRecM[A, B](a: A)(f: A => Tree[Either[A, B]]): Tree[B] = {
-//      flatMap(f(a)) {
-//        case Left(value) => tailRecM(value)(f)
-//        case Right(value) => Leaf(value)
-//      }
-//    }
+    override def tailRecM[A, B](a: A)(f: A => Tree[Either[A, B]]): Tree[B] = {
+      flatMap(f(a)) {
+        case Left(value) => tailRecM(value)(f)
+        case Right(value) => Leaf(value)
+      }
+    }
 
 
     override def pure[A](x: A): Tree[A] = Leaf(x)
